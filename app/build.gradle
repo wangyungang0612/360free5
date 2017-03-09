@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.cui"
+        minSdkVersion 10
+        targetSdkVersion 10
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:1.5'
+    compile files('libs/AMap_Location_v1.4.1_20150917.jar')
+    compile files('libs/Android_Map_V3.0.20150831.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+}
